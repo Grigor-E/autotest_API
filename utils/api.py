@@ -76,7 +76,37 @@ class Google_maps_api():
 
 class Swapi_star_wars_api():
 
-    # Метод для проверки персонажа
+    # Метод для проверки персонажа 1
+    @staticmethod
+    def get_luke_skywalker():
+        get_resource = "people/1/"  # Ресурс метода Get
+        get_url = base_url_swapi + get_resource
+        print(get_url)
+        result_get = Http_methods.get(get_url)  # Создание переменной с присвоением значения обращения к кастомному методу Get
+        print(result_get.text)  # Печать текста значения result_get
+        return result_get
+
+    # Метод для проверки персонажа 2
+    @staticmethod
+    def get_c_3po():
+        get_resource = "people/2/"  # Ресурс метода Get
+        get_url = base_url_swapi + get_resource
+        print(get_url)
+        result_get = Http_methods.get(get_url)  # Создание переменной с присвоением значения обращения к кастомному методу Get
+        # print(result_get.text)  # Печать текста значения result_get
+        return result_get
+
+    # Метод для проверки персонажа 3
+    @staticmethod
+    def get_r2_d2():
+        get_resource = "people/3/"  # Ресурс метода Get
+        get_url = base_url_swapi + get_resource
+        print(get_url)
+        result_get = Http_methods.get(get_url)  # Создание переменной с присвоением значения обращения к кастомному методу Get
+        # print(result_get.text)  # Печать текста значения result_get
+        return result_get
+
+    # Метод для проверки персонажа 4
     @staticmethod
     def get_darth_vader():
         get_resource = "people/4/"  # Ресурс метода Get
@@ -137,7 +167,6 @@ class Swapi_star_wars_api():
         return result_get
 
     # Метод для проверки фильма 6
-
     @staticmethod
     def get_film_6():
         get_resource = "films/6/"  # Ресурс метода Get
