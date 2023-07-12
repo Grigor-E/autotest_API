@@ -166,6 +166,16 @@ class Swapi_star_wars_api():
         # print(result_get.text)  # Печать текста значения result_get
         return result_get
 
+    # Метод для проверки персонажа 10
+    @staticmethod
+    def get_obi_wan_kenobi():
+        get_resource = "people/10/"  # Ресурс метода Get
+        get_url = base_url_swapi + get_resource
+        print(get_url)
+        result_get = Http_methods.get(get_url)  # Создание переменной с присвоением значения обращения к кастомному методу Get
+        # print(result_get.text)  # Печать текста значения result_get
+        return result_get
+
     # Метод для проверки фильма 1
     @staticmethod
     def get_film_1():
