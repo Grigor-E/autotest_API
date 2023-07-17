@@ -138,6 +138,37 @@ def test_star_wars_film():
     Checking.check_status_code(result_get, 200)
     Checking.check_json_value_text(result_get, 'characters')
 
+# Получение информации о планетах фильма "Звездные войны"
+def test_star_wars_planets():
+
+    print("Метод GET planet 1")  # Печать маркера для информированности
+    result_get = Swapi_star_wars_api.get_planet_1()  # Создание переменной со значением вызова метода
+    Checking.check_status_code(result_get, 200)
+    Checking.check_json_token(result_get, ['name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents', 'films', 'created', 'edited', 'url'])
+    Checking.check_json_value(result_get, 'name', 'Tatooine')
+    Checking.check_json_value_text(result_get, 'rotation_period')
+    Checking.check_json_value(result_get, 'rotation_period', '23')
+    Checking.check_json_value_text(result_get, 'orbital_period')
+    Checking.check_json_value(result_get, 'orbital_period', '304')
+
+    print("Метод GET planet 2")  # Печать маркера для информированности
+    result_get = Swapi_star_wars_api.get_planet_2()  # Создание переменной со значением вызова метода
+    Checking.check_status_code(result_get, 200)
+    Checking.check_json_token(result_get, ['name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents', 'films', 'created', 'edited', 'url'])
+    Checking.check_json_value(result_get, 'name', 'Alderaan')
+    Checking.check_json_value_text(result_get, 'diameter')
+    Checking.check_json_value(result_get, 'diameter', '12500')
+
+    print("Метод GET planet 3")  # Печать маркера для информированности
+    result_get = Swapi_star_wars_api.get_planet_3()  # Создание переменной со значением вызова метода
+    Checking.check_status_code(result_get, 200)
+    Checking.check_json_token(result_get, ['name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents', 'films', 'created', 'edited', 'url'])
+    Checking.check_json_value(result_get, 'name', 'Yavin IV')
+    Checking.check_json_value_text(result_get, 'climate')
+    Checking.check_json_value(result_get, 'climate', 'temperate, tropical')
+
+
+
 
 
 
