@@ -167,6 +167,14 @@ def test_star_wars_planets():
     Checking.check_json_value_text(result_get, 'climate')
     Checking.check_json_value(result_get, 'climate', 'temperate, tropical')
 
+    print("Метод GET planet 4")  # Печать маркера для информированности
+    result_get = Swapi_star_wars_api.get_planet_4()  # Создание переменной со значением вызова метода
+    Checking.check_status_code(result_get, 200)
+    Checking.check_json_token(result_get, ['name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents', 'films', 'created', 'edited', 'url'])
+    Checking.check_json_value(result_get, 'name', 'Hoth')
+    Checking.check_json_value_text(result_get, 'gravity')
+    Checking.check_json_value(result_get, 'gravity', '1.1 standard')
+
 
 
 
