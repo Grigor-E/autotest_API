@@ -316,5 +316,16 @@ class Swapi_star_wars_api():
         print(result_get.text)  # Печать текста значения result_get
         return result_get
 
+    # Метод для проверки планеты 7
+    @staticmethod
+    def get_planet_7():
+        get_resource = "planets/7/"  # Ресурс метода Get
+        get_url = base_url_swapi + get_resource
+        print(get_url)
+        result_get = Http_methods.get(get_url)  # Создание переменной с присвоением значения обращения к кастомному методу Get
+        print(result_get.text)  # Печать текста значения result_get
+        return result_get
+
+
 
 
