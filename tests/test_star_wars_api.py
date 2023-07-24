@@ -207,7 +207,6 @@ def test_star_wars_planets():
     Checking.check_json_value_text(result_get, 'residents')
     Checking.check_json_value(result_get, 'residents', ["https://swapi.dev/api/people/3/", "https://swapi.dev/api/people/21/", "https://swapi.dev/api/people/35/", "https://swapi.dev/api/people/36/", "https://swapi.dev/api/people/37/", "https://swapi.dev/api/people/38/", "https://swapi.dev/api/people/39/", "https://swapi.dev/api/people/42/", "https://swapi.dev/api/people/60/", "https://swapi.dev/api/people/61/", "https://swapi.dev/api/people/66/"])
 
-
     print("Метод GET planet 9")  # Печать маркера для информированности
     result_get = Swapi_star_wars_api.get_planet_9()  # Создание переменной со значением вызова метода
     Checking.check_status_code(result_get, 200)
