@@ -208,6 +208,14 @@ def test_star_wars_planets():
     Checking.check_json_value(result_get, 'residents', ["https://swapi.dev/api/people/3/", "https://swapi.dev/api/people/21/", "https://swapi.dev/api/people/35/", "https://swapi.dev/api/people/36/", "https://swapi.dev/api/people/37/", "https://swapi.dev/api/people/38/", "https://swapi.dev/api/people/39/", "https://swapi.dev/api/people/42/", "https://swapi.dev/api/people/60/", "https://swapi.dev/api/people/61/", "https://swapi.dev/api/people/66/"])
 
 
+    print("Метод GET planet 9")  # Печать маркера для информированности
+    result_get = Swapi_star_wars_api.get_planet_9()  # Создание переменной со значением вызова метода
+    Checking.check_status_code(result_get, 200)
+    Checking.check_json_token(result_get, ['name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents', 'films', 'created', 'edited', 'url'])
+    Checking.check_json_value(result_get, 'name', 'Coruscant')
+    Checking.check_json_value_text(result_get, 'films')
+    Checking.check_json_value(result_get, 'films', ["https://swapi.dev/api/films/3/", "https://swapi.dev/api/films/4/", "https://swapi.dev/api/films/5/", "https://swapi.dev/api/films/6/"])
+
 
 
 
