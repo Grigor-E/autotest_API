@@ -223,6 +223,14 @@ def test_star_wars_planets():
     Checking.check_json_value_text(result_get, 'created')
     Checking.check_json_value(result_get, 'created', '2014-12-10T12:45:06.577000Z')
 
+    print("Метод GET planet 11")  # Печать маркера для информированности
+    result_get = Swapi_star_wars_api.get_planet_11()  # Создание переменной со значением вызова метода
+    Checking.check_status_code(result_get, 200)
+    Checking.check_json_token(result_get, ['name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents', 'films', 'created', 'edited', 'url'])
+    Checking.check_json_value(result_get, 'name', 'Geonosis')
+    Checking.check_json_value_text(result_get, 'edited')
+    Checking.check_json_value(result_get, 'edited', '2014-12-20T20:58:18.437000Z')
+
 
 
 
