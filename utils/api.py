@@ -65,7 +65,7 @@ class Google_maps_api():
         delete_resource = "/maps/api/place/delete/json"  # Ресурс метода Delete
         delete_url = base_url_maps + delete_resource + key
         print(delete_url)
-        json_for_delete_new_location = {                 # Переменная для изменения новой локации
+        json_for_delete_new_location = {                 # Переменная для удаления новой локации
             "place_id": place_id
         }
         result_delete = Http_methods.delete(delete_url, json_for_delete_new_location)  # Создание переменной с присвоением значения обращения к кастомному методу Delete
