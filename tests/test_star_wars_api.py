@@ -1,9 +1,11 @@
 import json
+import allure
 
 from utils.api import Swapi_star_wars_api
 from utils.checking import Checking
 
 # Получение информации о персонажах фильма "Звездные войны"
+@allure.description("Test GET star_wars_people")
 def test_star_wars_people():
 
     print("Метод GET Luke Skywalker")  # Печать маркера для информированности
@@ -139,6 +141,8 @@ def test_star_wars_film():
     Checking.check_json_value_text(result_get, 'characters')
 
 # Получение информации о планетах фильма "Звездные войны"
+
+@allure.description("Test GET star_planets")
 def test_star_wars_planets():
 
     print("Метод GET planet 1")  # Печать маркера для информированности
